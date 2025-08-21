@@ -1,0 +1,16 @@
+GET http://localhost:4000/maps/get-coordinates?address=sheryians coding school indrapuri
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0OTYxNDNmNDgwYzRlODFjOGE1MWMiLCJpYXQiOjE3NTU3OTM1MjQsImV4cCI6MTc1NTg3OTkyNH0.95pWVf8MmTaowqLyC8gDskJKFlU5dLon-6UqMCayvpw
+
+
+
+### get distance
+GET http://localhost:4000/maps/get-distance?origin=28 Harrison avenue &destination=4281 Chestnut ridge rd
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0OTYxNDNmNDgwYzRlODFjOGE1MWMiLCJpYXQiOjE3NTU3OTM1MjQsImV4cCI6MTc1NTg3OTkyNH0.95pWVf8MmTaowqLyC8gDskJKFlU5dLon-6UqMCayvpw
+
+
+### get auto suggestion
+GET http://localhost:4000/maps/get-suggestions?input=28 Harrison ave
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0OTYxNDNmNDgwYzRlODFjOGE1MWMiLCJpYXQiOjE3NTU3OTM1MjQsImV4cCI6MTc1NTg3OTkyNH0.95pWVf8MmTaowqLyC8gDskJKFlU5dLon-6UqMCayvpw

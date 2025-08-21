@@ -1,0 +1,37 @@
+### Create Ride
+POST http://localhost:4000/rides/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0OTYxNDNmNDgwYzRlODFjOGE1MWMiLCJpYXQiOjE3NTU3OTYwMDAsImV4cCI6MTc1NTg4MjQwMH0.RWA1UnhOpGTKunURLlpIjrziq5p6274msTKu_bpiJF8
+
+{
+  "pickup": "28 Harrison avenue",
+  "destination": "4281 Chestnut ridge rd",
+  "vehicleType": "car"
+}
+
+### Get Fare
+GET http://localhost:4000/rides/get-fare?pickup=123%20Main%20St&destination=456%20Elm%20St
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0OTYxNDNmNDgwYzRlODFjOGE1MWMiLCJpYXQiOjE3NTU3OTYwMDAsImV4cCI6MTc1NTg4MjQwMH0.RWA1UnhOpGTKunURLlpIjrziq5p6274msTKu_bpiJF8
+
+
+### Confirm Ride
+POST http://localhost:4000/rides/confirm
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0YWVhYmMzYzk1YzRiNmUwOTExYjMiLCJpYXQiOjE3NTU3OTYyMTksImV4cCI6MTc1NTg4MjYxOX0.fOx7Nl534SJG9P1tu3599looIiHfjlOd1uY_IBz3zg0
+
+{
+  "rideId": "68a752bbe0eb6e7feb9944bb"
+}
+
+### Start Ride
+GET http://localhost:4000/rides/start-ride?rideId=68a752bbe0eb6e7feb9944bb&otp=123456
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0YWVhYmMzYzk1YzRiNmUwOTExYjMiLCJpYXQiOjE3NTU3OTYyMTksImV4cCI6MTc1NTg4MjYxOX0.fOx7Nl534SJG9P1tu3599looIiHfjlOd1uY_IBz3zg0
+
+### End Ride
+POST http://localhost:4000/rides/end-ride
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0YWVhYmMzYzk1YzRiNmUwOTExYjMiLCJpYXQiOjE3NTU3OTYyMTksImV4cCI6MTc1NTg4MjYxOX0.fOx7Nl534SJG9P1tu3599looIiHfjlOd1uY_IBz3zg0
+
+{
+  "rideId": "64e2c8f2b1a2c8e2c8f2b1a2"
+}

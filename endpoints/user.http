@@ -1,0 +1,46 @@
+### Creating user
+POST http://localhost:4000/users/register
+Content-Type: application/json
+
+{
+  "fullname": {
+    "firstname": "John",
+    "lastname": "Doe"
+  },
+  "email": "test1@example.com",
+  "password": "secret123"
+}
+
+
+### Login user
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+  "email": "test1@example.com",
+  "password": "secret12345"
+}
+
+
+### Change User Password
+POST http://localhost:4000/users/changePassword
+Content-Type: application/json
+
+{
+  "email": "test1@example.com",
+  "oldPassword": "secret1234",
+  "newPassword": "secret12345"
+}
+
+
+
+### getting user profile
+GET http://localhost:4000/users/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0OTYxNDNmNDgwYzRlODFjOGE1MWMiLCJpYXQiOjE3NTU2MjEwOTUsImV4cCI6MTc1NTcwNzQ5NX0.EEQ3h3QGl1bEb3xGNrI0L3c4eipdvx3MzMXS0_HN4bk
+
+
+### logout 
+GET http://localhost:4000/users/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0OTYxNDNmNDgwYzRlODFjOGE1MWMiLCJpYXQiOjE3NTU2MjEwOTUsImV4cCI6MTc1NTcwNzQ5NX0.EEQ3h3QGl1bEb3xGNrI0L3c4eipdvx3MzMXS0_HN4bk

@@ -1,0 +1,56 @@
+### Creating Captain
+POST http://localhost:4000/captains/register
+Content-Type: application/json
+
+{
+  "fullname": {
+    "firstname": "John",
+    "lastname": "Doe"
+  },
+  "email": "captain1@example.com",
+  "password": "secret123",
+  "vehicle": {
+    "color": "Red",
+    "plate": "XYZ1234",
+    "capacity": 4,
+    "vehicleType": "CAR"
+  },
+  "status": "ACTIVE",
+  "location": {
+    "lat": 12.9716,
+    "lng": 77.5946
+  }
+}
+
+
+### Login Captain
+POST http://localhost:4000/captains/login
+Content-Type: application/json
+
+{
+  "email": "captain1@example.com",
+  "password": "secret1234"
+}
+
+
+### Change Captain Password
+POST http://localhost:4000/captains/changePassword
+Content-Type: application/json
+
+{
+  "email": "captain1@example.com",
+  "oldPassword": "secret123",
+  "newPassword": "secret1234"
+}
+
+
+### Getting Captain Profile
+GET http://localhost:4000/captains/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0YWVhYmMzYzk1YzRiNmUwOTExYjMiLCJpYXQiOjE3NTU2MjMyODIsImV4cCI6MTc1NTcwOTY4Mn0.biYc5zo7uIT-UmPtBKbNxM0ebG50mK-Ppgf5Venh97M
+
+
+### Logout Captain
+GET http://localhost:4000/captains/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGE0YWVhYmMzYzk1YzRiNmUwOTExYjMiLCJpYXQiOjE3NTU2MjMyODIsImV4cCI6MTc1NTcwOTY4Mn0.biYc5zo7uIT-UmPtBKbNxM0ebG50mK-Ppgf5Venh97M
